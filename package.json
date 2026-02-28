@@ -6,7 +6,7 @@
   "scripts": {
     "start:dev": "next dev --turbopack -p 3000",
     "start:prod": "next start",
-    "build:gh": "next build",
+    "build:pkg": "next build",
     "fmt:format": "prettier --write --ignore-path .gitignore .",
     "deps:install": "npm install --no-audit --prefer-offline --verbose --no-fund",
     "deps:update": "npm-check-updates -u && npm run deps:install",
