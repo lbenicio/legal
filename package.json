@@ -9,11 +9,11 @@
     "build:pkg": "next build",
     "fmt:lint": "next lint --fix",
     "fmt:pretty": "prettier --write --ignore-path .gitignore .",
-    "update:all": "npm-check-updates -u && npm install",
+    "deps:update": "npm-check-updates -u && npm install",
     "type:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.8.0",
+    "@formatjs/intl-localematcher": "^0.8.1",
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
@@ -36,27 +36,27 @@
     "@radix-ui/react-tabs": "^1.1.13",
     "@radix-ui/react-toast": "^1.2.15",
     "@radix-ui/react-tooltip": "^1.2.8",
-    "@tailwindcss/postcss": "^4.1.18",
-    "autoprefixer": "^10.4.23",
+    "@tailwindcss/postcss": "^4.2.1",
+    "autoprefixer": "^10.4.27",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
-    "dotenv": "^17.2.3",
+    "dotenv": "^17.3.1",
     "embla-carousel-react": "^8.6.0",
     "gray-matter": "^4.0.3",
-    "lucide-react": "^0.563.0",
+    "lucide-react": "^0.575.0",
     "negotiator": "^1.0.0",
-    "next": "16.1.4",
+    "next": "16.1.6",
     "next-themes": "^0.4.6",
-    "react": "^19.2.3",
-    "react-day-picker": "^9.13.0",
-    "react-dom": "^19.2.3",
-    "react-hook-form": "^7.71.1",
+    "react": "^19.2.4",
+    "react-day-picker": "^9.14.0",
+    "react-dom": "^19.2.4",
+    "react-hook-form": "^7.71.2",
     "recharts": "^3.7.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "server-only": "^0.0.1",
-    "tailwind-merge": "^3.4.0",
+    "tailwind-merge": "^3.5.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^4.3.6"
   },
@@ -66,103 +66,14 @@
     "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint-config-next": "^16.1.4",
+    "eslint-config-next": "^16.1.6",
     "eslint-config-prettier": "^10.1.8",
-    "npm-check-updates": "^19.3.1",
+    "npm-check-updates": "^19.6.3",
     "postcss": "^8",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "tailwindcss": "^4.1.18",
+    "tailwindcss": "^4.2.1",
     "typescript": "^5"
-  },
-  "overrides": {
-    "@radix-ui/react-accordion": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-alert-dialog": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-avatar": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-checkbox": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-dialog": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-dropdown-menu": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-label": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-menubar": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-popover": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-collapsible": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-progress": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-radio-group": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-scroll-area": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-select": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-separator": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-slider": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-slot": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-switch": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-tabs": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-toast": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@radix-ui/react-tooltip": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    },
-    "@motherduck/wasm-client": {
-      "apache-arrow": "^21.0.0"
-    }
   },
   "engines": {
     "node": ">=24.0.0"
