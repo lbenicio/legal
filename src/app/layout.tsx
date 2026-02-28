@@ -3,7 +3,7 @@
 import { Toaster } from '@/components/ui/toaster';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import React, { useEffect, useState } from 'react';
-import './globals.css';
+import '../styles/globals.css';
 import { getLocaleFromCookieClient } from '@/lib/client/locale';
 import type { Locale } from '@/i18n-config';
 import { i18n } from '@/i18n-config';
