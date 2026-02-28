@@ -11,17 +11,17 @@ export function Footer() {
         </p>
         <div className='flex items-center gap-2'>
           <Button variant='ghost' size='icon' asChild>
-            <Link href='#' aria-label='Twitter'>
+            <Link href='https://twitter.com/lbenicio_' aria-label='Twitter'>
               <Twitter className='h-5 w-5' />
             </Link>
           </Button>
           <Button variant='ghost' size='icon' asChild>
-            <Link href='#' aria-label='GitHub'>
+            <Link href='https://github.com/lbenicio' aria-label='GitHub'>
               <Github className='h-5 w-5' />
             </Link>
           </Button>
           <Button variant='ghost' size='icon' asChild>
-            <Link href='#' aria-label='Contact'>
+            <Link href='https://contact.lbenicio.dev' aria-label='Contact'>
               <MessageCircle className='h-5 w-5' />
             </Link>
           </Button>
