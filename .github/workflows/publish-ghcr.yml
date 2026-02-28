@@ -1,0 +1,47 @@
+name: Publish Docker image to GHCR
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: publish-ghcr-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Extract package name and version
+        id: pkg
+        run: |
+          echo "PACKAGE_NAME=$(jq -r .name package.json)" >> $GITHUB_ENV
+          echo "PACKAGE_VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        run: |
+          IMAGE_NAME=ghcr.io/lbenicio/${PACKAGE_NAME}
+          docker build -t $IMAGE_NAME:${PACKAGE_VERSION} -t $IMAGE_NAME:latest .
+          docker push $IMAGE_NAME:${PACKAGE_VERSION}
+          docker push $IMAGE_NAME:latest

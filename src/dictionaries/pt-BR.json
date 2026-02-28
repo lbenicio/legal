@@ -1,0 +1,22 @@
+
+{
+  "page": {
+    "home": {
+      "title": "Documentos Legais",
+      "description": "Por favor, selecione um documento para visualizar seu conteúdo."
+    },
+    "docs": {
+      "sidebarTitle": "Documentos"
+    },
+    "notFound": {
+      "title": "404 - Página não encontrada",
+      "message": "Desculpe, a página que você está procurando não existe.",
+      "homeButton": "Ir para a página inicial"
+    },
+    "error": {
+      "title": "Algo deu errado!",
+      "message": "Ocorreu um erro inesperado. Por favor, tente novamente.",
+      "retryButton": "Tentar novamente"
+    }
+  }
+}
