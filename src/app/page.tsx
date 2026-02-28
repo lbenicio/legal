@@ -47,34 +47,34 @@ export default function LegalClarityPage() {
 
   if (isLoading || !dictionary || !documents) {
     return (
-      <div className="flex flex-col min-h-screen bg-background font-body">
-        <header className="p-4 sm:p-6 border-b bg-card shadow-sm">
-          <div className="container mx-auto flex items-center justify-between">
-            <Skeleton className="h-8 w-36" />
-            <div className="flex items-center gap-2">
-              <Skeleton className="h-10 w-10 rounded-full" />
-              <Skeleton className="h-10 w-10 rounded-full" />
+      <div className='bg-background font-body flex min-h-screen flex-col'>
+        <header className='bg-card border-b p-4 shadow-sm sm:p-6'>
+          <div className='container mx-auto flex items-center justify-between'>
+            <Skeleton className='h-8 w-36' />
+            <div className='flex items-center gap-2'>
+              <Skeleton className='h-10 w-10 rounded-full' />
+              <Skeleton className='h-10 w-10 rounded-full' />
             </div>
           </div>
         </header>
-        <main className="flex-1 container mx-auto p-4 sm:p-6 md:p-8">
+        <main className='container mx-auto flex-1 p-4 sm:p-6 md:p-8'>
           <Card>
             <CardHeader>
-              <Skeleton className="h-9 w-1/2" />
+              <Skeleton className='h-9 w-1/2' />
             </CardHeader>
             <CardContent>
-              <Skeleton className="h-5 w-3/4 mb-6" />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Skeleton className='mb-6 h-5 w-3/4' />
+              <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
                 {[...Array(3)].map((_, i) => (
                   <Card key={i}>
-                    <CardHeader className="flex-row items-center gap-4">
-                      <Skeleton className="h-8 w-8 rounded-full" />
-                      <Skeleton className="h-6 w-3/4" />
+                    <CardHeader className='flex-row items-center gap-4'>
+                      <Skeleton className='h-8 w-8 rounded-full' />
+                      <Skeleton className='h-6 w-3/4' />
                     </CardHeader>
                     <CardContent>
-                      <Skeleton className="h-4 w-full" />
-                      <Skeleton className="h-4 w-full mt-2" />
-                      <Skeleton className="h-4 w-2/3 mt-2" />
+                      <Skeleton className='h-4 w-full' />
+                      <Skeleton className='mt-2 h-4 w-full' />
+                      <Skeleton className='mt-2 h-4 w-2/3' />
                     </CardContent>
                   </Card>
                 ))}
@@ -88,40 +88,42 @@ export default function LegalClarityPage() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-background font-body">
-      <header className="p-4 sm:p-6 border-b bg-card shadow-sm">
-        <div className="container mx-auto flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-primary font-headline">Legal Clarity</h1>
-          <div className="flex items-center gap-2">
+    <div className='bg-background font-body flex min-h-screen flex-col'>
+      <header className='bg-card border-b p-4 shadow-sm sm:p-6'>
+        <div className='container mx-auto flex items-center justify-between'>
+          <h1 className='text-primary font-headline text-2xl font-bold'>
+            Leonardo Benicio
+          </h1>
+          <div className='flex items-center gap-2'>
             <LocaleSwitcher />
             <ThemeSwitcher />
           </div>
         </div>
       </header>
 
-      <main className="flex-1 container mx-auto p-4 sm:p-6 md:p-8">
+      <main className='container mx-auto flex-1 p-4 sm:p-6 md:p-8'>
         <Card>
           <CardHeader>
-            <CardTitle className="text-3xl font-headline text-primary">
+            <CardTitle className='font-headline text-primary text-3xl'>
               {dictionary.page.home.title}
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="mb-6 text-foreground/80">
+            <p className='text-foreground/80 mb-6'>
               {dictionary.page.home.description}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
               {documents.map((doc) => (
-                <Link key={doc.id} href={`/docs/${doc.id}`} className="group">
-                  <Card className="h-full transition-all duration-300 group-hover:shadow-lg group-hover:border-primary">
-                    <CardHeader className="flex-row items-center gap-4">
-                      <doc.icon className="h-8 w-8 text-primary" />
-                      <CardTitle className="text-xl font-semibold text-foreground group-hover:text-primary">
+                <Link key={doc.id} href={`/docs/${doc.id}`} className='group'>
+                  <Card className='group-hover:border-primary h-full transition-all duration-300 group-hover:shadow-lg'>
+                    <CardHeader className='flex-row items-center gap-4'>
+                      <doc.icon className='text-primary h-8 w-8' />
+                      <CardTitle className='text-foreground group-hover:text-primary text-xl font-semibold'>
                         {doc.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground line-clamp-3">
+                      <p className='text-muted-foreground line-clamp-3'>
                         {doc.summary}...
                       </p>
                     </CardContent>

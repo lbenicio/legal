@@ -11,14 +11,10 @@ import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { getDictionary } from '@/get-dictionary';
 import { getLocaleFromCookieClient } from '@/lib/client/locale';
-import {
-  getAllDocuments,
-  getDocumentBySlug,
-} from '@/lib/client/documents';
+import { getAllDocuments, getDocumentBySlug } from '@/lib/client/documents';
 import { Skeleton } from '@/components/ui/skeleton';
 import type { Locale } from '@/i18n-config';
 import { i18n } from '@/i18n-config';
-
 
 export default function DocumentPageClient({
   params,
@@ -65,36 +61,36 @@ export default function DocumentPageClient({
 
   if (isLoading || !dictionary || !documents || !selectedDoc) {
     return (
-      <div className="flex flex-col min-h-screen bg-background font-body">
-        <header className="p-4 sm:p-6 border-b bg-card shadow-sm sticky top-0 z-10">
-          <div className="container mx-auto flex items-center justify-between">
-            <Skeleton className="h-8 w-36" />
-            <div className="flex items-center gap-2">
-              <Skeleton className="h-10 w-10 rounded-full" />
-              <Skeleton className="h-10 w-10 rounded-full" />
+      <div className='bg-background font-body flex min-h-screen flex-col'>
+        <header className='bg-card sticky top-0 z-10 border-b p-4 shadow-sm sm:p-6'>
+          <div className='container mx-auto flex items-center justify-between'>
+            <Skeleton className='h-8 w-36' />
+            <div className='flex items-center gap-2'>
+              <Skeleton className='h-10 w-10 rounded-full' />
+              <Skeleton className='h-10 w-10 rounded-full' />
             </div>
           </div>
         </header>
-        <div className="flex-1 container mx-auto p-4 sm:p-6 md:p-8 grid md:grid-cols-[250px_1fr] gap-10">
-          <aside className="md:sticky md:top-24 h-fit">
-            <Skeleton className="h-7 w-32 mb-4" />
-            <div className="flex flex-col gap-2">
-              <Skeleton className="h-12 w-full" />
-              <Skeleton className="h-12 w-full" />
-              <Skeleton className="h-12 w-full" />
+        <div className='container mx-auto grid flex-1 gap-10 p-4 sm:p-6 md:grid-cols-[250px_1fr] md:p-8'>
+          <aside className='h-fit md:sticky md:top-24'>
+            <Skeleton className='mb-4 h-7 w-32' />
+            <div className='flex flex-col gap-2'>
+              <Skeleton className='h-12 w-full' />
+              <Skeleton className='h-12 w-full' />
+              <Skeleton className='h-12 w-full' />
             </div>
           </aside>
           <main>
             <Card>
               <CardHeader>
-                <Skeleton className="h-10 w-3/4" />
+                <Skeleton className='h-10 w-3/4' />
               </CardHeader>
-              <CardContent className="space-y-4">
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-5/6" />
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-4/6" />
-                <Skeleton className="h-4 w-full" />
+              <CardContent className='space-y-4'>
+                <Skeleton className='h-4 w-full' />
+                <Skeleton className='h-4 w-5/6' />
+                <Skeleton className='h-4 w-full' />
+                <Skeleton className='h-4 w-4/6' />
+                <Skeleton className='h-4 w-full' />
               </CardContent>
             </Card>
           </main>
@@ -105,38 +101,38 @@ export default function DocumentPageClient({
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-background font-body">
-      <header className="p-4 sm:p-6 border-b bg-card shadow-sm sticky top-0 z-10">
-        <div className="container mx-auto flex items-center justify-between">
+    <div className='bg-background font-body flex min-h-screen flex-col'>
+      <header className='bg-card sticky top-0 z-10 border-b p-4 shadow-sm sm:p-6'>
+        <div className='container mx-auto flex items-center justify-between'>
           <Link
-            href="/"
-            className="text-2xl font-bold text-primary font-headline"
+            href='/'
+            className='text-primary font-headline text-2xl font-bold'
           >
-            Legal Clarity
+            Leonardo Benicio
           </Link>
-          <div className="flex items-center gap-2">
+          <div className='flex items-center gap-2'>
             <LocaleSwitcher />
             <ThemeSwitcher />
           </div>
         </div>
       </header>
 
-      <div className="flex-1 container mx-auto p-4 sm:p-6 md:p-8 grid md:grid-cols-[250px_1fr] gap-10">
-        <aside className="md:sticky md:top-24 h-fit">
-          <h2 className="text-lg font-semibold mb-4 text-foreground">
+      <div className='container mx-auto grid flex-1 gap-10 p-4 sm:p-6 md:grid-cols-[250px_1fr] md:p-8'>
+        <aside className='h-fit md:sticky md:top-24'>
+          <h2 className='text-foreground mb-4 text-lg font-semibold'>
             {dictionary.page.docs.sidebarTitle}
           </h2>
-          <nav className="flex flex-col gap-2">
+          <nav className='flex flex-col gap-2'>
             {documents.map((doc: LegalDocument) => (
               <Button
                 key={doc.id}
                 variant={selectedDoc.id === doc.id ? 'default' : 'ghost'}
-                className="justify-start gap-3 px-3 py-2 text-left h-auto text-base hover:bg-accent"
+                className='hover:bg-accent h-auto justify-start gap-3 px-3 py-2 text-left text-base'
                 asChild
               >
                 <Link href={`/docs/${doc.id}`}>
-                  <doc.icon className="h-5 w-5 shrink-0" />
-                  <span className="truncate">{doc.title}</span>
+                  <doc.icon className='h-5 w-5 shrink-0' />
+                  <span className='truncate'>{doc.title}</span>
                 </Link>
               </Button>
             ))}
@@ -146,17 +142,17 @@ export default function DocumentPageClient({
         <main>
           <Card
             key={selectedDoc.id}
-            className="w-full animate-in fade-in-0 duration-500"
+            className='animate-in fade-in-0 w-full duration-500'
           >
             <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-3xl font-headline text-primary">
-                <selectedDoc.icon className="h-8 w-8" />
+              <CardTitle className='font-headline text-primary flex items-center gap-3 text-3xl'>
+                <selectedDoc.icon className='h-8 w-8' />
                 {selectedDoc.title}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div
-                className="prose dark:prose-invert max-w-none text-foreground/90 leading-relaxed space-y-6 text-justify"
+                className='prose dark:prose-invert text-foreground/90 max-w-none space-y-6 text-justify leading-relaxed'
                 dangerouslySetInnerHTML={{ __html: selectedDoc.content || '' }}
               />
             </CardContent>

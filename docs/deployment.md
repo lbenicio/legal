@@ -1,6 +1,6 @@
 # Deployment Guide
 
-This guide provides instructions for building and deploying the Legal Clarity application.
+This guide provides instructions for building and deploying the Legal Documents application.
 
 ## Deployment Strategy
 

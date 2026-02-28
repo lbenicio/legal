@@ -1,6 +1,6 @@
 # Architecture Overview
 
-This document provides a high-level overview of the architecture for the Legal Clarity application.
+This document provides a high-level overview of the architecture for the Legal Documents application.
 
 ## Core Technology Stack
 

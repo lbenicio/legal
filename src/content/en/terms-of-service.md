@@ -119,7 +119,7 @@ I may update these Terms from time to time. I will notify users of material chan
 
 ## 12. Governing Law & Dispute Resolution
 
-These Terms shall be governed by the laws of [Your Country/State], without regard to conflict of law principles. Any disputes shall be resolved through informal negotiation first. If unresolved, disputes may be submitted to binding arbitration in [Your Location].
+These Terms shall be governed by the laws of Brazil, without regard to conflict of law principles. Any disputes shall be resolved through informal negotiation first. If unresolved, disputes may be submitted to binding arbitration in Brazil.
 
 ## 13. Severability
 
@@ -136,7 +136,7 @@ For questions about these Terms:
 **Leonardo Benicio**  
 Independent Software Developer  
 Email: hi@lbeniciod.dev  
-Website: [Your website URL]
+Website: https://lbenicio.dev
 
 I aim to respond to inquiries within 7 business days.
 

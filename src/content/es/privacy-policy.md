@@ -8,7 +8,7 @@ summary: 'Su privacidad es importante. Esta política explica cómo Leonardo Ben
 
 ## Introducción
 
-¡Hola! Soy **Leonardo Benicio**, un desarrollador de software independiente con sede en [Su ubicación/país]. Desarrollo aplicaciones web, aplicaciones para macOS, aplicaciones para iOS y proporciono servicios de consultoría como desarrollador independiente ("Indie Developer").
+¡Hola! Soy **Leonardo Benicio**, un desarrollador de software independiente con sede en Brasil. Desarrollo aplicaciones web, aplicaciones para macOS, aplicaciones para iOS y proporciono servicios de consultoría como desarrollador independiente ("Indie Developer").
 
 Esta Política de Privacidad explica cómo manejo la información cuando usted utiliza mi software, sitios web o servicios. Como desarrollador independiente, valoro la transparencia y la privacidad, y he diseñado mis sistemas con estos principios en mente.
 
@@ -107,7 +107,7 @@ Si tiene preguntas sobre esta Política de Privacidad o mis prácticas de datos:
 **Leonardo Benicio**  
 Desarrollador de Software Independiente  
 Correo electrónico: hi@lbeniciod.dev  
-Sitio web: [Su URL del sitio web]
+Sitio web: https://lbenicio.dev
 
 Mi objetivo es responder a consultas relacionadas con la privacidad dentro de los 7 días hábiles.
 

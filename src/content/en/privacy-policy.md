@@ -8,7 +8,7 @@ summary: 'Your privacy is important. This policy explains how Leonardo Benicio (
 
 ## Introduction
 
-Hello! I'm **Leonardo Benicio**, an independent software developer based in [Your Location/Country]. I develop web applications, macOS apps, iOS apps, and provide consulting services as a solo developer ("Indie Developer").
+Hello! I'm **Leonardo Benicio**, an independent software developer based in Brazil. I develop web applications, macOS apps, iOS apps, and provide consulting services as a solo developer ("Indie Developer").
 
 This Privacy Policy explains how I handle information when you use my software, websites, or services. As an indie developer, I value transparency and privacy, and I've designed my systems with these principles in mind.
 
@@ -107,7 +107,7 @@ If you have questions about this Privacy Policy or my data practices:
 **Leonardo Benicio**  
 Indie Software Developer  
 Email: hi@lbeniciod.dev  
-Website: [Your website URL]
+Website: https://lbenicio.dev
 
 I aim to respond to privacy-related inquiries within 7 business days.
 

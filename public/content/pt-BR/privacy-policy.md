@@ -1,13 +1,120 @@
 ---
 title: 'Política de Privacidade'
 icon: 'Shield'
-summary: 'Sua privacidade é importante para nós. É política da Legal Clarity respeitar sua privacidade em relação a qualquer informação que possamos coletar de você em nosso site.'
+summary: 'Sua privacidade é importante. Esta política explica como Leonardo Benicio (desenvolvedor de software independente) coleta e usa dados de suas aplicações e serviços.'
 ---
 
-Sua privacidade é importante para nós. É política da Legal Clarity respeitar sua privacidade em relação a qualquer informação que possamos coletar de você em nosso site e em outros sites que possuímos и operamos.
+**Última atualização:** 14 de janeiro de 2025
 
-Só pedimos informações pessoais quando realmente precisamos delas para lhe fornecer um serviço. Coletamo-las por meios justos e legais, com seu conhecimento e consentimento. Também informamos por que estamos coletando e como serão usadas. Apenas retemos as informações coletadas pelo tempo necessário para lhe fornecer o serviço solicitado. Os dados que armazenamos, protegeremos dentro de meios comercialmente aceitáveis para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.
+## Introdução
 
-Não compartilhamos nenhuma informação de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei. Nosso site pode ter links para sites externos que не são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e as práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas de privacidade.
+Olá! Eu sou **Leonardo Benicio**, um desenvolvedor de software independente sediado no Brasil. Desenvolvo aplicações web, aplicativos para macOS, aplicativos para iOS e forneço serviços de consultoria como desenvolvedor independente ("Indie Developer").
 
-Você é livre para recusar nossa solicitação de suas informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados. O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno da privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com os dados do usuário e informações pessoais, sinta-se à vontade para nos contatar.
+Esta Política de Privacidade explica como lido com informações quando você usa meu software, sites ou serviços. Como desenvolvedor independente, valorizo transparência e privacidade, e projetei meus sistemas com esses princípios em mente.
+
+## Escopo
+
+Esta política se aplica a:
+
+- Meus sites e aplicações web (incluindo projetos futuros)
+- Aplicativos para macOS que desenvolvo e distribuo
+- Aplicativos para iOS que desenvolvo e distribuo
+- Quaisquer serviços de consultoria ou desenvolvimento que forneço
+- Comunicações comigo (e-mail, solicitações de suporte, etc.)
+
+## Quais informações eu coleto
+
+### 1. Dados Técnicos e de Diagnóstico (Analíticas Auto-hospedadas)
+Eu coleto informações técnicas mínimas para melhorar minhas aplicações:
+
+- **Dados de Uso do Aplicativo:** Estatísticas básicas de uso (recursos utilizados, duração da sessão)
+- **Métricas de Desempenho:** Desempenho do aplicativo, tempos de carregamento, uso de recursos
+- **Relatórios de Falhas:** Informações anônimas sobre falhas para corrigir bugs
+- **Informações do Dispositivo:** Tipo de dispositivo, versão do sistema operacional, configurações de idioma
+- **Logs Técnicos:** Logs de erros e informações de diagnóstico
+
+**Importante:** Esses dados são:
+- **Anônimos:** Não vinculados à sua identidade pessoal
+- **Auto-hospedados:** Armazenados em meus próprios servidores, não em serviços de análise de terceiros
+- **Apenas para Diagnóstico:** Usados exclusivamente para melhorar a estabilidade e o desempenho do aplicativo
+
+### 2. Informações que Você Fornece Diretamente
+- **Solicitações de Suporte:** Informações que você fornece ao entrar em contato comigo para suporte
+- **Feedback:** Sugestões, relatórios de bugs ou solicitações de recursos
+- **Consultas de Consultoria:** Informações compartilhadas ao discutir projetos potenciais
+
+### 3. Dados de Uso do Site
+Para meus sites, posso coletar:
+- Logs de acesso básicos (endereço IP, tipo de navegador, páginas visitadas)
+- Análises por meio de soluções auto-hospedadas (sem Google Analytics ou terceiros semelhantes)
+
+## O que eu NÃO coleto
+
+- **Informações de Identificação Pessoal:** Não coleto nomes, endereços de e-mail ou detalhes pessoais, a menos que você os forneça explicitamente para suporte
+- **Dados de Localização:** Não rastreio sua localização precisa
+- **Listas de Contatos:** Não acesso seus contatos, mensagens ou arquivos pessoais
+- **Informações Financeiras:** Não coleto detalhes de pagamento (tratados por lojas de aplicativos ou processadores de pagamento)
+- **Conteúdo do Usuário:** Não acesso seus dados pessoais dentro dos aplicativos, a menos que necessário para funcionalidades específicas do aplicativo (e apenas com permissão explícita)
+
+## Como uso as informações coletadas
+
+1. **Melhorar o Software:** Corrigir bugs, otimizar o desempenho e melhorar a experiência do usuário
+2. **Diagnosticar Problemas:** Compreender e resolver problemas técnicos
+3. **Planejar Desenvolvimento:** Determinar quais recursos construir ou melhorar com base nos padrões de uso
+4. **Comunicar:** Responder a solicitações de suporte e feedback
+5. **Conformidade Legal:** Cumprir obrigações legais, se necessário
+
+## Armazenamento e Segurança de Dados
+
+- **Infraestrutura Auto-hospedada:** Todos os dados são armazenados em servidores que controlo ou em provedores de nuvem confiáveis com fortes compromissos de privacidade
+- **Retenção de Dados:** Dados de diagnóstico normalmente são retidos por 90 dias, depois excluídos automaticamente
+- **Medidas de Segurança:** Implemento medidas técnicas apropriadas para proteger os dados, embora nenhum sistema seja 100% seguro
+- **Backups:** Realizo backups regulares para recuperação de desastres
+
+## Compartilhamento de Dados e Terceiros
+
+**NÃO vendo, alugo nem troco seus dados.**
+
+As únicas exceções:
+
+1. **Requisitos Legais:** Se exigido por lei ou para proteger meus direitos
+2. **Provedores de Serviços:** Provedores de infraestrutura (hospedagem, e-mail) que processam dados em meu nome sob acordos de confidencialidade rigorosos
+3. **Lojas de Aplicativos:** Análises padrão fornecidas pela Apple App Store ou plataformas semelhantes (sujeitas às respectivas políticas de privacidade)
+
+## Seus Direitos e Escolhas
+
+- **Opt-Out:** A maioria da coleta de diagnóstico pode ser desativada nas configurações do aplicativo
+- **Solicitações de Acesso:** Você pode solicitar informações sobre quais dados tenho sobre você
+- **Solicitações de Exclusão:** Você pode solicitar a exclusão de quaisquer dados pessoais que eu mantenha
+- **Correções:** Você pode solicitar correções a dados imprecisos
+
+## Transferências Internacionais de Dados
+
+Como desenvolvedor independente operando internacionalmente, os dados podem ser processados em diferentes países. Garanto que existam salvaguardas apropriadas para qualquer transferência transfronteiriça de dados.
+
+## Privacidade de Crianças
+
+Minhas aplicações e serviços não são direcionados a crianças menores de 13 anos. Não coleto informações de crianças conscientemente.
+
+## Alterações nesta Política
+
+Posso atualizar esta política conforme minhas práticas evoluem. Publicarei alterações no meu site e, para alterações significativas, notificarei os usuários por meio de atualizações do aplicativo.
+
+## Entre em Contato
+
+Se você tiver dúvidas sobre esta Política de Privacidade ou minhas práticas de dados:
+
+**Leonardo Benicio**  
+Desenvolvedor de Software Independente  
+E-mail: hi@lbeniciod.dev  
+Site: https://lbenicio.dev
+
+Meu objetivo é responder a consultas relacionadas à privacidade em até 7 dias úteis.
+
+## Reconhecimento
+
+Ao usar meu software ou serviços, você reconhece que leu e entendeu esta Política de Privacidade.
+
+---
+
+*Como desenvolvedor independente, acredito em construir software que respeite os usuários. Esta política reflete meu compromisso com transparência e privacidade.*

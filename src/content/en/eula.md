@@ -105,7 +105,7 @@ If you obtained the Software through an app store (Apple App Store, etc.), you a
 
 ## 13. Governing Law & Disputes
 
-This EULA shall be governed by the laws of [Your Country/State], without regard to conflict of law principles. Any disputes shall first be attempted to be resolved through informal negotiation. If unresolved, disputes may be submitted to binding arbitration in [Your Location].
+This EULA shall be governed by the laws of Brazil, without regard to conflict of law principles. Any disputes shall first be attempted to be resolved through informal negotiation. If unresolved, disputes may be submitted to binding arbitration in Brazil.
 
 ## 14. Changes to This EULA
 
@@ -122,7 +122,7 @@ For questions about this EULA:
 **Leonardo Benicio**  
 Independent Software Developer  
 Email: hi@lbeniciod.dev  
-Website: [Your website URL]
+Website: https://lbenicio.dev
 
 I aim to respond to inquiries within 7 business days.
 

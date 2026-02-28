@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <title>Legal Clarity</title>
+        <title>Leonardo Benicio Legal Documents</title>
         <meta
           name='description'
           content='View and navigate legal documents like Terms of Use and Privacy Policies.'
