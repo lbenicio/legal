@@ -9,6 +9,9 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+    ignore:
+      - dependency-name: "lucide-react"
+        versions: [">=1.0.1"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
