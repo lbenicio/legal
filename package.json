@@ -12,7 +12,7 @@
     "deps:update": "npm-check-updates -u && npm run deps:install",
     "type:check": "tsc --noEmit",
     "aws:deploy": "aws cloudformation deploy --region sa-east-1 --stack-name site-legal --template-file cloudformation.yaml",
-    "aws:sync": "aws s3 sync dist/ s3://legal.lbenicio.dev/ --delete",
+    "aws:sync": "aws s3 sync out/ s3://legal.lbenicio.dev/ --delete",
     "aws:invalidate": "aws cloudfront create-invalidation --distribution-id EA9XACI0F7ZM9 --paths \"/*\"",
     "aws:pipe": "npm run aws:deploy && npm run aws:sync && npm run aws:invalidate"
   },
@@ -48,7 +48,7 @@
     "dotenv": "^17.4.2",
     "embla-carousel-react": "^8.6.0",
     "gray-matter": "^4.0.3",
-    "lucide-react": "^1.16.0",
+    "lucide-react": "0.575.0",
     "negotiator": "^1.0.0",
     "next": "16.2.6",
     "next-themes": "^0.4.6",
