@@ -17,7 +17,7 @@
     "aws:pipe": "npm run aws:deploy && npm run aws:sync && npm run aws:invalidate"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.8.8",
+    "@formatjs/intl-localematcher": "^0.8.9",
     "@hookform/resolvers": "^5.4.0",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
