@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.8.13",
-    "@hookform/resolvers": "^5.4.0",
+    "@hookform/resolvers": "^5.5.7",
     "@radix-ui/react-accordion": "^1.2.18",
     "@radix-ui/react-alert-dialog": "^1.1.23",
     "@radix-ui/react-avatar": "^1.2.4",
