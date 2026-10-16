@@ -8,7 +8,7 @@ on:
   workflow_run:
     workflows:
       - Build
-      - Deploy site to Github Pages
+      - Deploy to AWS
       - Release new version
       - Publish Docker image to GHCR
     branches:

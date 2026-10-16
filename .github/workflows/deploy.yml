@@ -1,0 +1,79 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  AWS_REGION: sa-east-1
+  STACK_NAME: legal
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build:pkg
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Resolve AWS resources
+        id: aws-resources
+        shell: bash
+        run: |
+          set -euo pipefail
+          bucket="$(aws cloudformation describe-stacks --stack-name "$STACK_NAME" --query "Stacks[0].Outputs[?OutputKey=='S3BucketName'].OutputValue | [0]" --output text)"
+          distribution="$(aws cloudformation describe-stacks --stack-name "$STACK_NAME" --query "Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionId'].OutputValue | [0]" --output text)"
+          test -n "$bucket" && test "$bucket" != "None"
+          test -n "$distribution" && test "$distribution" != "None"
+          echo "bucket=$bucket" >> "$GITHUB_OUTPUT"
+          echo "distribution=$distribution" >> "$GITHUB_OUTPUT"
+
+      - name: Sync site to S3
+        run: aws s3 sync out/ "s3://${{ steps.aws-resources.outputs.bucket }}/" --delete
+
+      - name: Invalidate CloudFront
+        run: aws cloudfront create-invalidation --distribution-id "${{ steps.aws-resources.outputs.distribution }}" --paths "/*"
+
+      - name: Summary
+        if: always()
+        env:
+          BRANCH_NAME: ${{ github.ref_name }}
+          COMMIT_SHA: ${{ github.sha }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          {
+            echo "## 🚀 Deploy to AWS"
+            echo ""
+            echo "| Field | Value |"
+            echo "|-------|-------|"
+            printf '| Branch | %s |\n' "$BRANCH_NAME"
+            printf '| Commit | %s |\n' "$COMMIT_SHA"
+            printf '| Status | %s |\n' "$JOB_STATUS"
+            echo "| Live URL | https://legal.lbenicio.dev |"
+          } >> "$GITHUB_STEP_SUMMARY"

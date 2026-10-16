@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial project setup.
 
+## [1.2.1] - 2026-10-16
+
+### Changed
+
+- Replaced the GitHub Pages deployment with the existing AWS S3 and CloudFront stack.
+- Resolved deployment resources from CloudFormation outputs and aligned the AWS scripts with the live `legal` stack.
+
 ## [v1.0.1]
 
 ### Fixed
