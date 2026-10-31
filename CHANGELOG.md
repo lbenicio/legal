@@ -7,8 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.2] - 2026-10-31
+
 ### Added
 - Initial project setup.
+
+### Changed
+
+- Bumped the project patch version to `1.2.2`.
+- Routed AWS deployment through GitHub’s `production` environment, restricted to the `main` branch.
 
 ## [1.2.1] - 2026-10-16
 

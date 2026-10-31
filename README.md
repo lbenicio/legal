@@ -1,5 +1,7 @@
 # Legal Clarity
 
+**Current version:** `1.2.2`
+
 Legal Clarity is a modern, multilingual, and statically-generated web application designed for browsing and managing legal documents like Terms of Service, Privacy Policies, and End-User License Agreements. It's built with performance and ease of use in mind, leveraging a modern tech stack for a seamless developer and user experience.
 
 ![Legal Clarity Screenshot](https://placehold.co/800x450.png?text=Legal+Clarity+App)
