@@ -7,5 +7,5 @@ export async function getContentSlugs(): Promise<string[]> {
     // at build time without more complex scripting. For now, we
     // hardcode the known slugs. This list must be kept in sync
     // with the files in `public/content/[locale]`.
-    return ['eula', 'privacy-policy', 'terms-of-service'];
+    return ['eula', 'privacy-policy', 'terms-of-service', 'apps-and-support'];
 }

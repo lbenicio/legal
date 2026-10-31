@@ -24,7 +24,7 @@ async function fetchContent(locale: Locale, slug: string): Promise<string> {
 export async function getContentSlugs(): Promise<string[]> {
     // For a static site, we can't read the directory.
     // We have to know the file names in advance.
-    return ['eula', 'privacy-policy', 'terms-of-service'];
+    return ['eula', 'privacy-policy', 'terms-of-service', 'apps-and-support'];
 }
 
 
