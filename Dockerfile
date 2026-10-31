@@ -1,24 +1,23 @@
 # Stage 1: Build the Next.js application
-FROM node:18-alpine AS builder
+FROM node:24-alpine AS builder
 
 # Set working directory
 WORKDIR /app
 
 # Copy package.json and package-lock.json
-COPY package.json ./
-COPY package-lock.json ./
+COPY package.json package-lock.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm ci --no-fund --no-audit
 
 # Copy the rest of the application source code
 COPY . .
 
 # Build the Next.js application for static export
-RUN npm run build:pkg
+RUN npm run build:prod
 
 # Stage 2: Serve the static files with Nginx
-FROM nginx:1.25-alpine
+FROM nginx:1.27-alpine
 
 # Copy the static files from the builder stage
 COPY --from=builder /app/out /usr/share/nginx/html

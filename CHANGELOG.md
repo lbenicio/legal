@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.3] - 2026-10-31
+
+### Fixed
+
+- Fixed the GHCR container build by using Node 24, the production build script, and lockfile-based installation.
+- Separated main-branch image tags from release tags to prevent two workflows from racing on `latest` and version tags.
+
 ## [1.2.2] - 2026-10-31
 
 ### Added

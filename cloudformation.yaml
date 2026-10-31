@@ -328,7 +328,7 @@ Outputs:
              Proxy: OFF (DNS only)
 
         4. Build and upload:
-           npm run build:pkg
+           npm run build:prod
            aws s3 sync out/ s3://${domain}/ --delete
 
         5. Invalidate CloudFront cache:

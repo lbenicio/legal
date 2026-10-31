@@ -1,12 +1,13 @@
 {
   "name": "legal",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": true,
   "license": "GPL-3.0-only",
   "scripts": {
     "start:dev": "next dev --turbopack -p 3000",
     "start:prod": "next start",
-    "build:pkg": "next build",
+    "build:prod": "next build",
+    "build:pkg": "npm run build:prod",
     "fmt:format": "prettier --write --ignore-path .gitignore .",
     "deps:install": "npm install --no-audit --prefer-offline --verbose --no-fund",
     "deps:update": "npm-check-updates -u && npm run deps:install",

@@ -1,47 +1,53 @@
-name: Publish Docker image to GHCR
+name: Publish main Docker image to GHCR
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 concurrency:
   group: publish-ghcr-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
-  contents: write
+  contents: read
   packages: write
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: '24'
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v4
 
-      - name: Extract package name and version
-        id: pkg
-        run: |
-          echo "PACKAGE_NAME=$(jq -r .name package.json)" >> $GITHUB_ENV
-          echo "PACKAGE_VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
 
       - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v4.7.0
+        uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push Docker image
-        run: |
-          IMAGE_NAME=ghcr.io/lbenicio/${PACKAGE_NAME}
-          docker build -t $IMAGE_NAME:${PACKAGE_VERSION} -t $IMAGE_NAME:latest .
-          docker push $IMAGE_NAME:${PACKAGE_VERSION}
-          docker push $IMAGE_NAME:latest
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v6
+        with:
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=raw,value=main
+            type=sha,prefix=sha-
+
+      - name: Build and publish main image
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
