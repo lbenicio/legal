@@ -21,7 +21,7 @@ export function Footer() {
             </Link>
           </Button>
           <Button variant='ghost' size='icon' asChild>
-            <Link href='https://contact.lbenicio.dev' aria-label='Contact'>
+            <Link href='https://lbenicio.dev/contact/' aria-label='Contact'>
               <MessageCircle className='h-5 w-5' />
             </Link>
           </Button>
