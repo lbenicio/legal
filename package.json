@@ -12,9 +12,9 @@
     "deps:install": "npm install --no-audit --prefer-offline --verbose --no-fund",
     "deps:update": "npm-check-updates -u && npm run deps:install",
     "type:check": "tsc --noEmit",
-    "aws:deploy": "aws cloudformation deploy --region sa-east-1 --stack-name legal --template-file cloudformation.yaml --tags awsApplication=arn:aws:resource-groups:sa-east-1:527540700211:group/lbenicio-community/06owkw4s6gp5r894wctvv2jj5u",
+    "aws:deploy": "aws cloudformation deploy --region sa-east-1 --stack-name legal --template-file cloudformation.yaml --parameter-overrides \"CertificateArn=${CERTIFICATE_ARN:-}\" --tags Project=legal",
     "aws:sync": "aws s3 sync out/ s3://legal.lbenicio.dev/ --delete",
-    "aws:invalidate": "aws cloudfront create-invalidation --distribution-id EIQ6WOSFA9EUU --paths \"/*\"",
+    "aws:invalidate": "aws cloudfront create-invalidation --distribution-id \"$(aws cloudformation describe-stacks --stack-name legal --query \"Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionId'].OutputValue | [0]\" --output text)\" --paths \"/*\"",
     "aws:pipe": "npm run aws:deploy && npm run aws:sync && npm run aws:invalidate"
   },
   "dependencies": {
