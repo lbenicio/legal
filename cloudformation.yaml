@@ -10,6 +10,7 @@ Parameters:
     Type: String
     Description: Primary domain.
     Default: legal.lbenicio.dev
+    AllowedPattern: "^[A-Za-z0-9.-]+$"
 
   CertificateArn:
     Type: String
@@ -103,9 +104,13 @@ Resources:
       FunctionConfig:
         Comment: Resolve static Next.js routes to exported HTML files.
         Runtime: cloudfront-js-2.0
-      FunctionCode: |
+      FunctionCode: !Sub |
         function handler(event) {
           var request = event.request;
+          var host = request.headers.host && request.headers.host.value;
+          if (!host || host.toLowerCase() !== '${DomainName}'.toLowerCase()) {
+            return { statusCode: 403, statusDescription: 'Forbidden' };
+          }
           if (request.uri === '/') request.uri = '/index.html';
           else if (request.uri.endsWith('/')) request.uri = request.uri.slice(0, -1);
           if (!request.uri.includes('.')) request.uri += '.html';
@@ -188,6 +193,9 @@ Resources:
             AllowedMethods: [GET, HEAD, OPTIONS]
             CachedMethods: [GET, HEAD]
             Compress: true
+            FunctionAssociations:
+              - EventType: viewer-request
+                FunctionARN: !GetAtt IndexRewriteFunction.FunctionMetadata.FunctionARN
             ResponseHeadersPolicyId: !Ref SecurityHeadersPolicy
             ForwardedValues:
               QueryString: false
@@ -202,6 +210,9 @@ Resources:
             AllowedMethods: [GET, HEAD, OPTIONS]
             CachedMethods: [GET, HEAD]
             Compress: true
+            FunctionAssociations:
+              - EventType: viewer-request
+                FunctionARN: !GetAtt IndexRewriteFunction.FunctionMetadata.FunctionARN
             ResponseHeadersPolicyId: !Ref SecurityHeadersPolicy
             ForwardedValues:
               QueryString: false
