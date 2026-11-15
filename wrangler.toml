@@ -1,0 +1,10 @@
+name = "legal-worker"
+compatibility_date = "2026-11-14"
+workers_dev = false
+preview_urls = false
+routes = [{ pattern = "legal.lbenicio.dev", custom_domain = true }]
+
+[assets]
+directory = "./out"
+not_found_handling = "404-page"
+html_handling = "drop-trailing-slash"
