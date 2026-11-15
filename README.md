@@ -66,6 +66,10 @@ npm run build
 
 This command generates a static version of the site in the `out/` directory. These are the files you would deploy to a static hosting service.
 
+## Deployment to Cloudflare Workers
+
+The production workflow builds the static export in `out/` and deploys it to Cloudflare Workers at `https://legal.lbenicio.dev/`. Configure repository secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
+
 ## Deployment with Docker
 
 A multi-stage `Dockerfile` is included to build a lightweight, production-ready Docker image using Nginx.
