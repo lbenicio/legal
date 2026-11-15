@@ -85,3 +85,6 @@ A multi-stage `Dockerfile` is included to build a lightweight, production-ready 
     ```
 
 The application will now be running and accessible at `http://localhost:8080`.
+
+
+Before the first deployment, configure the two Cloudflare secrets above. If the hostname still has a DNS CNAME pointing to AWS, remove that conflicting record before Wrangler creates the Worker custom domain.
