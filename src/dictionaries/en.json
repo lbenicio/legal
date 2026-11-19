@@ -6,7 +6,8 @@
       "description": "Please select a document to view its contents."
     },
     "docs": {
-      "sidebarTitle": "Documents"
+      "sidebarTitle": "Documents",
+      "markdownLink": "View Markdown"
     },
     "notFound": {
       "title": "404 - Page Not Found",

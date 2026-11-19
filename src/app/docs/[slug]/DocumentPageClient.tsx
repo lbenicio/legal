@@ -151,6 +151,12 @@ export default function DocumentPageClient({
               </CardTitle>
             </CardHeader>
             <CardContent>
+              <a
+                href={`/content/${locale}/${selectedDoc.id}.md`}
+                className='mb-6 inline-flex text-sm font-medium text-primary underline underline-offset-4'
+              >
+                {dictionary.page.docs.markdownLink}
+              </a>
               <div
                 className='prose dark:prose-invert text-foreground/90 max-w-none space-y-6 text-justify leading-relaxed'
                 dangerouslySetInnerHTML={{ __html: selectedDoc.content || '' }}

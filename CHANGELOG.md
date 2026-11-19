@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Expose each legal document's Markdown source as an alternate format and localized link.
+
 ## [1.2.4] - 2026-11-11
 
 ### Changed
