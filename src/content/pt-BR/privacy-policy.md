@@ -4,7 +4,7 @@ icon: 'Shield'
 summary: 'Sua privacidade é importante. Esta política explica como Leonardo Benicio (desenvolvedor de software independente) coleta e usa dados de suas aplicações e serviços.'
 ---
 
-**Última atualização:** 14 de janeiro de 2025
+**Última atualização:** 20 de novembro de 2026
 
 ## Introdução
 
@@ -44,9 +44,9 @@ Eu coleto informações técnicas mínimas para melhorar minhas aplicações:
 - **Consultas de Consultoria:** Informações compartilhadas ao discutir projetos potenciais
 
 ### 3. Dados de Uso do Site
-Para meus sites, posso coletar:
-- Logs de acesso básicos (endereço IP, tipo de navegador, páginas visitadas)
-- Análises por meio de soluções auto-hospedadas (sem Google Analytics ou terceiros semelhantes)
+Meus sites podem coletar registros básicos de acesso, como a página solicitada e informações do navegador. Estes sites usam o Google Analytics 4 (GA4), um serviço fornecido pelo Google, para medir o uso: [lbenicio.dev](https://lbenicio.dev), [blog.lbenicio.dev](https://blog.lbenicio.dev), [apps.lbenicio.dev](https://apps.lbenicio.dev), [socials.lbenicio.dev](https://socials.lbenicio.dev), [newsletter.lbenicio.dev](https://newsletter.lbenicio.dev), [legal.lbenicio.dev](https://legal.lbenicio.dev) e [helm.lbenicio.dev](https://helm.lbenicio.dev). As tags são habilitadas em páginas de produção e configuradas para respeitar o sinal Do Not Track do navegador.
+
+O Google Analytics pode usar cookies próprios e processar identificadores pseudônimos, interações com páginas, informações do navegador e dispositivo e localização aproximada. O Google explica a coleta e o processamento de dados em suas [informações de proteção de dados do Analytics](https://support.google.com/analytics/answer/6004245) e na [Política de Privacidade](https://policies.google.com/privacy). Outros sites e aplicativos podem usar análises auto-hospedadas ou não usar análises, dependendo do serviço.
 
 ## O que eu NÃO coleto
 
@@ -79,7 +79,8 @@ As únicas exceções:
 
 1. **Requisitos Legais:** Se exigido por lei ou para proteger meus direitos
 2. **Provedores de Serviços:** Provedores de infraestrutura (hospedagem, e-mail) que processam dados em meu nome sob acordos de confidencialidade rigorosos
-3. **Lojas de Aplicativos:** Análises padrão fornecidas pela Apple App Store ou plataformas semelhantes (sujeitas às respectivas políticas de privacidade)
+3. **Provedores de Análise:** O Google processa dados de uso dos sites listados acima conforme seus termos e políticas de privacidade aplicáveis. Outros provedores de serviços podem processar dados conforme descrito acima.
+4. **Lojas de Aplicativos:** Análises padrão fornecidas pela Apple App Store ou plataformas semelhantes (sujeitas às respectivas políticas de privacidade)
 
 ## Seus Direitos e Escolhas
 

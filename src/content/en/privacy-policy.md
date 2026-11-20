@@ -4,7 +4,7 @@ icon: 'Shield'
 summary: 'Your privacy is important. This policy explains how Leonardo Benicio (indie software developer) collects and uses data from his applications and services.'
 ---
 
-**Last Updated:** 2025-01-14
+**Last Updated:** 2026-11-20
 
 ## Introduction
 
@@ -44,9 +44,9 @@ I collect minimal technical information to improve my applications:
 - **Consulting Inquiries:** Information shared when discussing potential projects
 
 ### 3. Website Usage Data
-For my websites, I may collect:
-- Basic access logs (IP address, browser type, pages visited)
-- Analytics via self-hosted solutions (no Google Analytics or similar third parties)
+My websites may collect basic access logs, such as the requested page and browser information. These sites use Google Analytics 4 (GA4), a service provided by Google, to measure website usage: [lbenicio.dev](https://lbenicio.dev), [blog.lbenicio.dev](https://blog.lbenicio.dev), [apps.lbenicio.dev](https://apps.lbenicio.dev), [socials.lbenicio.dev](https://socials.lbenicio.dev), [newsletter.lbenicio.dev](https://newsletter.lbenicio.dev), [legal.lbenicio.dev](https://legal.lbenicio.dev), and [helm.lbenicio.dev](https://helm.lbenicio.dev). Their tags are enabled on production pages and configured to honor a browser's Do Not Track signal.
+
+Google Analytics may use first-party cookies and process pseudonymous identifiers, page interactions, browser and device details, and approximate location. Google explains its data collection and processing in its [Analytics data safeguards](https://support.google.com/analytics/answer/6004245) and [Privacy Policy](https://policies.google.com/privacy). Other websites and applications may use self-hosted analytics or no analytics, depending on the service.
 
 ## What I Don't Collect
 
@@ -79,7 +79,8 @@ The only exceptions:
 
 1. **Legal Requirements:** If required by law or to protect my rights
 2. **Service Providers:** Infrastructure providers (hosting, email) who process data on my behalf under strict confidentiality agreements
-3. **App Stores:** Standard analytics provided by Apple App Store or similar platforms (subject to their respective privacy policies)
+3. **Analytics Providers:** Google processes usage data for the websites listed above under its applicable terms and privacy policies. Other service providers may process data as described above.
+4. **App Stores:** Standard analytics provided by Apple App Store or similar platforms (subject to their respective privacy policies)
 
 ## Your Rights & Choices
 

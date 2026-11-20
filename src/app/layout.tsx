@@ -55,11 +55,24 @@ export default function RootLayout({
           {children}
           <Toaster />
         </ThemeProvider>
-        <Script
-          defer
-          src='https://analytics.4686189.xyz/script.js'
-          data-website-id='5235b272-ce59-465b-aabb-f20ddcd4edff'
-        ></Script>
+        {process.env.NODE_ENV === 'production' && (
+          <Script id='google-analytics' strategy='afterInteractive'>
+            {`(function () {
+              var doNotTrack = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+              if (doNotTrack === '1' || doNotTrack === 'yes') return;
+
+              window.dataLayer = window.dataLayer || [];
+              window.gtag = function () { window.dataLayer.push(arguments); };
+              window.gtag('js', new Date());
+              window.gtag('config', 'G-8SW89VY8EN');
+
+              var script = document.createElement('script');
+              script.async = true;
+              script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8SW89VY8EN';
+              document.head.appendChild(script);
+            })();`}
+          </Script>
+        )}
       </body>
     </html>
   );
