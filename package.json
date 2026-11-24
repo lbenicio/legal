@@ -8,6 +8,7 @@
     "start:prod": "next start",
     "build:prod": "next build",
     "build:pkg": "npm run build:prod",
+    "cf:deploy": "npx --yes wrangler@4 deploy --config wrangler.toml",
     "fmt:format": "prettier --write --ignore-path .gitignore .",
     "deps:install": "npm install --no-audit --prefer-offline --verbose --no-fund",
     "deps:update": "npm-check-updates -u && npm run deps:install",
