@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build:prod
 
 # Stage 2: Serve the static files with Nginx
-FROM nginx:1.27-alpine
+FROM nginx:1.29-alpine
 
 # Copy the static files from the builder stage
 COPY --from=builder /app/out /usr/share/nginx/html
