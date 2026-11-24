@@ -1,6 +1,20 @@
 import Link from 'next/link';
-import { Github, Twitter, MessageCircle } from 'lucide-react';
+import { siGithub, siX } from 'simple-icons';
+import { MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
+
+function BrandIcon({ path }: { path: string }) {
+  return (
+    <svg
+      aria-hidden='true'
+      className='h-5 w-5'
+      fill='currentColor'
+      viewBox='0 0 24 24'
+    >
+      <path d={path} />
+    </svg>
+  );
+}
 
 export function Footer() {
   return (
@@ -11,13 +25,13 @@ export function Footer() {
         </p>
         <div className='flex items-center gap-2'>
           <Button variant='ghost' size='icon' asChild>
-            <Link href='https://twitter.com/lbenicio_' aria-label='Twitter'>
-              <Twitter className='h-5 w-5' />
+            <Link href='https://x.com/lbenicio_' aria-label='X'>
+              <BrandIcon path={siX.path} />
             </Link>
           </Button>
           <Button variant='ghost' size='icon' asChild>
             <Link href='https://github.com/lbenicio' aria-label='GitHub'>
-              <Github className='h-5 w-5' />
+              <BrandIcon path={siGithub.path} />
             </Link>
           </Button>
           <Button variant='ghost' size='icon' asChild>
